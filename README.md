@@ -49,4 +49,7 @@ Next steps:
 - store the orders in the smart contract under a better key rather than just the orderId, 
 - figure out a system for qualifying the asset type in / asset type out, rather than just a number (but also need to make sure that it can be stored in a new storage slot, or I would have to separate the values from each storage slot, but if they're an unknown length, or a varied length per se, then that would be increasingly more difficult then just having a number representation)  
 
+still possible to do: 
+- add a way to be able to enter a ens either for the MM or for the user, and it will resolve to an address when making calls 
+
 
