@@ -28,8 +28,8 @@ Using socketio for the messaging system between the user and the market maker:
 - [ ] Proof generation file: 
     - [X] getSlots - to gather the slots for the transactionReceipt file 
     - [X] sendSlotsToStorageProofs file - to send the request to the storage proofs api
-    - [ ] Ngrok url + server to actually receive the status: DONE from storage proofs 
-- [ ] sendProofDataToEscrow file, that will send the slot data back to the escrow smart contract 
+    - [X] Ngrok url + server to actually receive the status: DONE from storage proofs 
+- [X] sendProofDataToEscrow file, that will send the slot data back to the escrow smart contract 
 - [ ] Escrow part 2: 
     - [ ] acceptSlotData function to accept the slot data
     - [ ] Ping the facts registry smart contract to get the slot values from the transactionReceipt smart contract 
