@@ -1,4 +1,5 @@
 import { io as Client } from "socket.io-client";
+import { env } from "bun";
 
 const socket = Client("http://localhost:3000");
 
