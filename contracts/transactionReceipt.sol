@@ -24,7 +24,6 @@ contract TransactionReceipt {
         uint256 assetTypeIn,
         uint256 assetAmountIn,
         uint256 assetTypeOut,
-        uint256 assetAmountOut,
         uint256 fee
     ) external payable {
         require(msg.value > 0, "Funds being sent must exceed 0.");
@@ -39,7 +38,7 @@ contract TransactionReceipt {
             assetTypeIn: assetTypeIn,
             assetAmountIn: assetAmountIn,
             assetTypeOut: assetTypeOut,
-            assetAmountOut: assetAmountOut,
+            assetAmountOut: msg.value,
             mmAddress: msg.sender,
             fee: fee,
             isUsed: true
