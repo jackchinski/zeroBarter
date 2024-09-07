@@ -17,7 +17,7 @@ Detailed steps:
 
 Using socketio for the messaging system between the user and the market maker: 
 - [X] Set up a server file 
-- [X] Set up a market maker and market maker 2 file 
+- [X] Set up a market maker and market maker2 file 
 - [X] Set up a user.js file 
 - [X] Create an escrow contract to lock your funds in
     - [X] The smart contract needs to let someone lock their funds in the contract and input:(orderId, mmAddress, recipientAddress ( msg.sender), assetTypeIn, assetAmountIn, assetTypeOut, assetAmountOut)
