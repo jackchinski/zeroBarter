@@ -1,8 +1,7 @@
 import { ethers } from "ethers";
 import { env } from "bun";
 import { transactionReceiptABI, transactionReceiptAddress } from "../ABI/transactionReceiptABI";
-
-// TODO: IMPORT START PROOF PROCESS AFTER IT'S MADE
+import { startProofProcess } from "..";
 
 // ran by MM in order to start the proof process to withdraw their funds
 
@@ -27,7 +26,7 @@ const handleTransactionEvent = async (transactionInfo: any) => {
   try {
     const blockNumber = await provider.getBlockNumber();
 
-    // await startProofProcess(orderId, recipientAddress, assetAmountOut, blockNumber); TODO: make dis work
+    await startProofProcess(orderId, recipientAddress, assetAmountOut, blockNumber);
   } catch (error) {
     console.error("Error getting block number: ", error);
   }

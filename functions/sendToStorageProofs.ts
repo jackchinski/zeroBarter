@@ -24,7 +24,7 @@ export async function sendToStorageProofs(slots: ReturnType<typeof getSlots>, bl
                 slots.assetTypeInSlot,
                 slots.assetAmountInSlot,
                 slots.assetTypeOutSlot,
-                slots.assetTypeOutSlot,
+                slots.assetAmountOutSlot,
                 slots.mmAddressSlot,
                 slots.feeSlot,
               ],

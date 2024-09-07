@@ -26,8 +26,8 @@ Using socketio for the messaging system between the user and the market maker:
     - [X] The transactionReceipt smart contract allows the market maker to send a transaction through it with the same data as the order requested(orderId, mmAddress (msg.sender), recipientAddress, assetTypeIn, assetAmountIn, assetTypeOut, assetAmountOut)
     - [X] transactionReceipt then saves the data in a mapping 
 - [ ] Proof generation file: 
-    - [ ] getSlots - to gather the slots for the transactionReceipt file 
-    - [ ] sendSlotsToStorageProofs file - to send the request to the storage proofs api
+    - [X] getSlots - to gather the slots for the transactionReceipt file 
+    - [X] sendSlotsToStorageProofs file - to send the request to the storage proofs api
     - [ ] Ngrok url + server to actually receive the status: DONE from storage proofs 
 - [ ] sendProofDataToEscrow file, that will send the slot data back to the escrow smart contract 
 - [ ] Escrow part 2: 
