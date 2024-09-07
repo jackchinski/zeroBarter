@@ -51,5 +51,8 @@ Next steps:
 
 still possible to do: 
 - add a way to be able to enter a ens either for the MM or for the user, and it will resolve to an address when making calls 
+- save on db forest instead of local? 
+- don't add a forge deploy script, but add a forge script to make the function calls to smart contracts to make them easy to make 
+- 
 
 

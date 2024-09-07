@@ -1,0 +1,13 @@
+{
+  "slots": {
+    "orderIdSlot": "",
+    "recipientAddressSlot": "",
+    "assetTypeInSlot": "",
+    "assetAmountInSlot": "",
+    "assetTypeOutSlot": "",
+    "assetAmountOutSlot": "",
+    "mmAddressSlot": "",
+    "feeSlot": ""
+  },
+  "blockNumber": 0
+}
