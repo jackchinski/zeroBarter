@@ -19,8 +19,8 @@ Using socketio for the messaging system between the user and the market maker:
 - [X] Set up a server file 
 - [X] Set up a market maker and market maker 2 file 
 - [X] Set up a user.js file 
-- [ ] Create an escrow contract to lock your funds in
-    - [ ] The smart contract needs to let someone lock their funds in the contract and input:(orderId, mmAddress, recipientAddress ( msg.sender), assetTypeIn, assetAmountIn, assetTypeOut, assetAmountOut)
+- [X] Create an escrow contract to lock your funds in
+    - [X] The smart contract needs to let someone lock their funds in the contract and input:(orderId, mmAddress, recipientAddress ( msg.sender), assetTypeIn, assetAmountIn, assetTypeOut, assetAmountOut)
     - [ ] Configure that MM file, to then listen to events that are emitted by the smart contract, when a user makes an order, but filter it to only log the events that include the as the market maker 
 - [ ] Make a transactionReceipt smart contract 
     - [ ] The transactionReceipt smart contract allows the market maker to send a transaction through it with the same data as the order requested(orderId, mmAddress (msg.sender), recipientAddress, assetTypeIn, assetAmountIn, assetTypeOut, assetAmountOut)
@@ -44,4 +44,9 @@ Nice to have:
 - 
 
 Next steps: 
-Withdrawing the order that hasn’t been fulfilled (need to prove that the order has not been fulfilled)
+- Withdrawing the order that hasn’t been fulfilled (need to prove that the order has not been fulfilled).
+- auto checking that the information that is passed by the user in the escrow contract is what the MM agreed on. 
+- store the orders in the smart contract under a better key rather than just the orderId, 
+- figure out a system for qualifying the asset type in / asset type out, rather than just a number (but also need to make sure that it can be stored in a new storage slot, or I would have to separate the values from each storage slot, but if they're an unknown length, or a varied length per se, then that would be increasingly more difficult then just having a number representation)  
+
+
