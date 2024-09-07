@@ -16,9 +16,9 @@ Here is my outline for this project thus far:
 Detailed steps: 
 
 Using socketio for the messaging system between the user and the market maker: 
-- [ ] Set up a server file 
-- [ ] Set up a market maker and market maker 2 file 
-- [ ] Set up a user.js file 
+- [X] Set up a server file 
+- [X] Set up a market maker and market maker 2 file 
+- [X] Set up a user.js file 
 - [ ] Create an escrow contract to lock your funds in
     - [ ] The smart contract needs to let someone lock their funds in the contract and input:(orderId, mmAddress, recipientAddress ( msg.sender), assetTypeIn, assetAmountIn, assetTypeOut, assetAmountOut)
     - [ ] Configure that MM file, to then listen to events that are emitted by the smart contract, when a user makes an order, but filter it to only log the events that include the as the market maker 
