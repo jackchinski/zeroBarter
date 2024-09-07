@@ -21,7 +21,7 @@ Using socketio for the messaging system between the user and the market maker:
 - [X] Set up a user.js file 
 - [X] Create an escrow contract to lock your funds in
     - [X] The smart contract needs to let someone lock their funds in the contract and input:(orderId, mmAddress, recipientAddress ( msg.sender), assetTypeIn, assetAmountIn, assetTypeOut, assetAmountOut)
-    - [ ] Configure that MM file, to then listen to events that are emitted by the smart contract, when a user makes an order, but filter it to only log the events that include the as the market maker 
+    - [X] Configure that MM file, to then listen to events that are emitted by the smart contract, when a user makes an order, but filter it to only log the events that include the as the market maker 
 - [ ] Make a transactionReceipt smart contract 
     - [ ] The transactionReceipt smart contract allows the market maker to send a transaction through it with the same data as the order requested(orderId, mmAddress (msg.sender), recipientAddress, assetTypeIn, assetAmountIn, assetTypeOut, assetAmountOut)
     - [ ] transactionReceipt then saves the data in a mapping 

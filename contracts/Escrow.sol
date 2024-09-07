@@ -42,10 +42,12 @@ contract Escrow {
         DROPPED
     }
 
+    // 0.001 eth in wei is 1000000000000000
+    // 0.0001 eth in wei is 100000000000000
+
     function lockFunds(
         uint256 orderId,
         uint256 assetTypeIn,
-        uint256 assetAmountIn,
         uint256 assetTypeOut,
         uint256 assetAmountOut,
         address mmAddress,
@@ -58,7 +60,7 @@ contract Escrow {
             orderId: orderId,
             recipientAddress: msg.sender,
             assetTypeIn: assetTypeIn,
-            assetAmountIn: assetAmountIn,
+            assetAmountIn: msg.value,
             assetTypeOut: assetTypeOut,
             assetAmountOut: assetAmountOut,
             mmAddress: mmAddress,
@@ -67,10 +69,10 @@ contract Escrow {
         }); // store the order info in a mapping under the order id
 
         emit FundsLockedNotification(
-            orderId, msg.sender, assetTypeIn, assetAmountIn, assetTypeOut, assetAmountOut, mmAddress, fee
+            orderId, msg.sender, assetTypeIn, msg.value, assetTypeOut, assetAmountOut, mmAddress, fee
         ); // notifty the MM the funds are locked
 
-        // update the status 
+        // update the status
         orders[orderId].status = OrderStatus.EMITTED;
     }
 }

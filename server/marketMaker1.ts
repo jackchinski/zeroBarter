@@ -1,9 +1,14 @@
 import { io as Client } from "socket.io-client";
 import { env } from "bun";
+import { ethers } from "ethers";
+import { escrowABI, escrowAddress } from "../ABI/escrowABI";
 
+// CHEAP MM
 const socket = Client("http://localhost:3000");
 
-// CHEAP MM 
+// console.log(env.ETHEREUM_SEPOLIA_RPC_URL);
+
+const provider = new ethers.JsonRpcProvider(env.ETHEREUM_SEPOLIA_RPC_URL);
 
 // say that this is a MM
 socket.emit("isMarketMaker");
@@ -32,3 +37,43 @@ socket.on("tradeRequest", (tradeRequest) => {
     socket.emit("tradeQuote", quote);
   }, 3000);
 });
+
+async function listenForFundsLockedNotification() {
+  console.log("[MM1]: Listening for events emitted by Escrow on Sepolia Testnet");
+
+  const contract = new ethers.Contract(escrowAddress, escrowABI, provider);
+
+  contract.on(
+    "FundsLockedNotification",
+    async (orderId, recipientAddress, assetTypeIn, assetAmountIn, assetTypeOut, assetAmountOut, mmAddress, fee) => {
+      if (mmAddress == "0x3814f9F424874860ffCD9f70f0D4B74b81e791E8") {
+        // only log the events that matter to this MM
+        console.log("******************************************");
+        console.log("*Escrow: Recipient has locked their funds*");
+        console.log("******************************************");
+        console.log("orderInfo:");
+        console.log("------------");
+        console.log("orderId:", orderId.toString());
+        console.log("Recipient address:", recipientAddress);
+        console.log("Asset Type In:", assetTypeIn.toString());
+        console.log(
+          "Asset Amount In:",
+          assetAmountIn.toString(),
+          "which in ETH is:",
+          ethers.formatEther(assetAmountIn)
+        );
+        console.log("Asset Type Out:", assetTypeOut.toString());
+        console.log(
+          "Asset Amount Out:",
+          assetAmountOut.toString(),
+          "which in ETH is:",
+          ethers.formatEther(assetAmountOut)
+        );
+        console.log("mmAddress:", mmAddress);
+        console.log("Fee:", fee.toString(), "which in ETH is:", ethers.formatEther(fee));
+      }
+    }
+  );
+}
+
+listenForFundsLockedNotification();
