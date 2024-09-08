@@ -28,6 +28,7 @@ This is a project for EthWarsaw 2024.
    9. have a better communication system between the market maker and the
    10. the fee is not needed in the smart contracts, since i have assetAmountIn and asssetAmountOut therefore fee = assetAmountIn - assetAmountOut... overlooked this, and don't really want to remove everything
    11. create more security, add reenterancy guard to the functions that are public in the smart contracts
+   12. Building out a front end for recipients and for MMs
 
 Here is my outline for this project thus far:
 
