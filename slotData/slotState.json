@@ -1,13 +1,13 @@
 {
   "slots": {
-    "orderIdSlot": "0x14d320aa7bf33c2cbdd133fb31556512abafe87cf320d9d39a394531dc048841",
-    "recipientAddressSlot": "0x14d320aa7bf33c2cbdd133fb31556512abafe87cf320d9d39a394531dc048842",
-    "assetTypeInSlot": "0x14d320aa7bf33c2cbdd133fb31556512abafe87cf320d9d39a394531dc048843",
-    "assetAmountInSlot": "0x14d320aa7bf33c2cbdd133fb31556512abafe87cf320d9d39a394531dc048844",
-    "assetTypeOutSlot": "0x14d320aa7bf33c2cbdd133fb31556512abafe87cf320d9d39a394531dc048845",
-    "assetAmountOutSlot": "0x14d320aa7bf33c2cbdd133fb31556512abafe87cf320d9d39a394531dc048846",
-    "mmAddressSlot": "0x14d320aa7bf33c2cbdd133fb31556512abafe87cf320d9d39a394531dc048847",
-    "feeSlot": "0x14d320aa7bf33c2cbdd133fb31556512abafe87cf320d9d39a394531dc048848"
+    "orderIdSlot": "",
+    "recipientAddressSlot": "",
+    "assetTypeInSlot": "",
+    "assetAmountInSlot": "",
+    "assetTypeOutSlot": "",
+    "assetAmountOutSlot": "",
+    "mmAddressSlot": "",
+    "feeSlot": ""
   },
-  "blockNumber": 6650873
+  "blockNumber": 0
 }

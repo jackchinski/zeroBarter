@@ -1,4 +1,4 @@
-export const transactionReceiptAddress = "0x69ddd55b1ba87c1e3cb2e3d2e16200c15b203634";
+export const transactionReceiptAddress = "0x22d00d607f88f04300fe3b972fcc0c9764d40057";
 export const transactionReceiptABI = JSON.parse(
   JSON.stringify([
     {

@@ -5,7 +5,7 @@ import { getSlots } from "./getSlots";
 import { clearSlotData } from "../slotData/dataManipulation";
 
 const mmPrivateKey = env.MM_PRIVATE_KEY;
-const sepoliaRpcUrl = env.SEPOLIA_RPC_URL;
+const sepoliaRpcUrl = env.ETHEREUM_SEPOLIA_RPC_URL;
 
 if (!mmPrivateKey || !sepoliaRpcUrl) {
   throw new Error("[RELAY SLOTS TO ESCROW]: Private key or Sepolia RPC is not defined");

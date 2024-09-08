@@ -46,7 +46,7 @@ async function listenForFundsLockedNotification() {
   contract.on(
     "FundsLockedNotification",
     async (orderId, recipientAddress, assetTypeIn, assetAmountIn, assetTypeOut, assetAmountOut, mmAddress, fee) => {
-      if (mmAddress == "0x3814f9F424874860ffCD9f70f0D4B74b81e791E8") {
+      if (mmAddress == "0xed29D1AcB94A085d31d9cb9217e70cd5284b4009") {
         // only log the events that matter to this MM
         console.log("********************************************");
         console.log("* Escrow: Recipient has locked their funds *");
